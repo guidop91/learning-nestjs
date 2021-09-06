@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { CatInterface } from './dto/cat-interface';
+import { CatInterface } from './interface/cat-interface';
 
 @Injectable()
 export class CatsService {
@@ -9,6 +9,6 @@ export class CatsService {
   }
 
   findAll() {
-    return `This action returns all cats`;
+    return this.cats;
   }
 }
